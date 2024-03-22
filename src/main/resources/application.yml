@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: Spring02
+  jpa:
+    show-sql: true
