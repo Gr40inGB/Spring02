@@ -15,8 +15,4 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String name;
-    @Column(name = "student_group")
-    @ManyToOne
-    @JoinColumn(table = "student_group", name = "id")
-    private StudentGroup group;
 }

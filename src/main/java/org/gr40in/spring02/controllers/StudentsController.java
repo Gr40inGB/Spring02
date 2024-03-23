@@ -14,6 +14,6 @@ public class StudentsController {
 
     @GetMapping(name = "students")
     public List<Student> findAllStudent() {
-        return repository.findAllStudents();
+        return repository.findAll();
     }
 }
