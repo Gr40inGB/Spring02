@@ -10,28 +10,27 @@ import java.util.List;
 
 @RequiredArgsConstructor
 @RestController
+@RequestMapping("student")
+
 public class StudentsController {
     private final StudentRepository repository;
 
-    @GetMapping("/student")
+    @GetMapping()
     public List<Student> findAllStudent() {
         return repository.findAll();
     }
 
-    @GetMapping("/student/{id}")
+    @GetMapping("/{id}")
     public Student findById(@PathVariable Long id) {
         return repository.findById(id).get();
     }
 
     //GET /student/search?name='studentName'
-    @GetMapping("/student/search")
-    public List<Student> searchByName(@RequestParam String name){
+    @GetMapping("/search")
+    public List<Student> searchByName(@RequestParam String name) {
         return repository.findByNameContains(name);
     }
-@GetMapping("GET /group/{groupName}/student")
-    public List<Student> findByGroup(@PathVariable Long id){
-    return repository.findAllByStudentGroupId(id);
-}
+
 
 
 }

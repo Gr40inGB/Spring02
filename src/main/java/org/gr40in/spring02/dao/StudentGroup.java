@@ -13,10 +13,10 @@ import java.util.List;
 @Builder
 @Entity
 @Table(name = "student_groups")
-
 public class StudentGroup {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private long name;
+
+    private String name;
 }

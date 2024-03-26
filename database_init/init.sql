@@ -1,23 +1,14 @@
 create table if not exists student_groups
 (
-    id bigint generated always as identity   primary key,
-    name
-       varchar(100)
+    id   bigint generated always as identity primary key,
+    name varchar(128)
 );
 
 create table if not exists students
 (
-    id
-                  bigint generated always as identity
-        constraint
-            students_pk
-            primary
-                key,
-    name
-                  varchar(100) not null,
-    student_group_id bigint
-        constraint students_student_groups_id_fk
-            references student_groups(id)
+    id               bigint generated always as identity primary key,
+    name             varchar(128) not null,
+    student_group_id bigint references student_groups (id)
 );
 
 
