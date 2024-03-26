@@ -17,9 +17,9 @@ create table if not exists students
                 key,
     name
                   varchar(100) not null,
-    student_group bigint
+    student_group_id bigint
         constraint students_student_groups_id_fk
-            references student_groups
+            references student_groups(id)
 );
 
 

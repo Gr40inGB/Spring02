@@ -8,7 +8,6 @@ import java.util.List;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 
-
-    public List<Student> findAll();
+    List<Student> findByNameContains(String s);
 
 }
