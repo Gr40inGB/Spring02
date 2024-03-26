@@ -28,6 +28,10 @@ public class StudentsController {
     public List<Student> searchByName(@RequestParam String name){
         return repository.findByNameContains(name);
     }
+@GetMapping("GET /group/{groupName}/student")
+    public List<Student> findByGroup(@PathVariable Long id){
+    return repository.findAllByStudentGroupId(id);
+}
 
 
 }

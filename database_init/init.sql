@@ -1,8 +1,6 @@
 create table if not exists student_groups
 (
-    id bigint generated always as identity
-        constraint student_groups_pk
-            primary key,
+    id bigint generated always as identity   primary key,
     name
        varchar(100)
 );
@@ -33,15 +31,15 @@ INSERT INTO student_groups (name)
 VALUES ('beauty girls');
 
 
-INSERT INTO students (name, student_group)
+INSERT INTO students (name, student_group_id)
 VALUES ('Garry Potter', 1);
-INSERT INTO students (name, student_group)
+INSERT INTO students (name, student_group_id)
 VALUES ('Ron Wissly', 2);
-INSERT INTO students (name, student_group)
+INSERT INTO students (name, student_group_id)
 VALUES ('Kailo Ren', 1);
-INSERT INTO students (name, student_group)
+INSERT INTO students (name, student_group_id)
 VALUES ('Rey', 4);
-INSERT INTO students (name, student_group)
+INSERT INTO students (name, student_group_id)
 VALUES ('Beyonce', 4);
 
 

@@ -10,4 +10,8 @@ public interface StudentRepository extends JpaRepository<Student, Long> {
 
     List<Student> findByNameContains(String s);
 
+    List<Student> findAllByStudentGroupId(Long id);
+
+
+
 }
